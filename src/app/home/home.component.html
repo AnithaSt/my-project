@@ -1,0 +1,51 @@
+<div class="container-fluid firstimage">
+  <div class="row">
+      <div class="col-lg-4 col-md-3 col-sm-12"></div>
+      <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5">
+    <div class="text-center text-white">
+      <div class="flex">
+      <img src="/assets/download.jpg" alt="image" width="80" height="70"><br><br>
+      <h1 class="font mb-1">E-Desk</h1>
+    </div>
+    <br><br><br>
+    <div class="container-fluid">  
+      
+        <!-- <div class="col-lg-4"></div> -->
+        <div class="col-lg-12 col-md-12 col-sm-12 mb-5"> 
+          <form name=myName #myName="ngForm" (ngSubmit)="send(myName.value)">
+              <div class="form-group">
+                  
+                <!-- <input type="text" name="email" class="form-control" id="email" [(ngModel)]="email" placeholder=" Email-id"#Email="ngModel"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required ngModel> -->
+                <input type="text" name="email" class="form-control" name="email" #email="ngModel" ngModel placeholder=" Email-id">
+                      <!-- <div *ngIf="Email.errors && (Email.touched|| Email.dirty)" class="alert text-danger">
+                        <div id="msg" [hidden]="!Email.errors.required">
+                          Email-id required
+                        </div>
+                        <div id="msg" [hidden]="!Email.errors.pattern">
+                           Please enter valid email
+                       </div>
+                      </div> -->
+                </div><br>
+                <div class="form-group">
+                  <!-- <input type="password" name="password" id="password" class="form-control" placeholder="Password" #Password="ngModel" minlength="8" required  ngModel> -->
+                  <input type="password" name="password"  class="form-control" placeholder="Password" #password="ngModel" ngModel>
+                        <!-- <div *ngIf="Password.errors && (Password.touched|| Password.dirty)" class="alert text-danger">
+                          <div id="msg" [hidden]="!Password.errors.required">
+                               Password requried
+                          </div>
+                          <div id="msg" [hidden]="!Password.errors.minlength">
+                                 Please enter minimum 8 character
+                          </div>
+                        </div> -->
+                   </div><br>
+     <!-- <div class="col-lg-4"></div> -->
+     <button type="submit" class="btn btn-md border-white text-white mt-5" [disabled]="!myName.form.valid">Login</button>
+    </form>
+    </div>  
+      
+    </div>	
+    
+    </div>	
+    <div class="col-lg-3 col-md-3 col-sm-12"></div><br>
+  </div>
+</div>

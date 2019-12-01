@@ -1,0 +1,41 @@
+.container{
+    margin-top: 100px;
+}
+.spa{
+    font-size: 24px;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 8px;
+    font-weight: 200px;
+    color: #000000;
+}
+#customers td, #customers th {
+    border: 1px solid #ddd;
+}
+/* #customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+   
+  } */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  
+  @media only screen and (max-width:375px){
+      .row{
+          margin-bottom: 30px ;
+      }     
+  }
+  @media only screen and (max-width:425px){
+    .row{
+        margin-bottom: 30px ;
+    }     
+}

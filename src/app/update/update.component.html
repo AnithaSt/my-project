@@ -1,0 +1,396 @@
+<div class="container-fluid">
+  <div class="container  mt-5">
+    <div class="row">
+      <div class="col-lg-2 col-md-1 col-sm-12"></div>
+        <div class="col-lg-8 col-md-10 col-sm-12">
+          <h2 class="mt-5">Onboard Employee Application</h2>
+            <p>Fill The Onboard Employee details</p>  
+            <hr>
+            <form class="mt-5 mb-5" name="myForm" #myForm="ngForm" (ngSubmit)="updates(myForm.value)" >
+              <label>Name:</label>
+              <!-- <div class="d-flex"> -->
+                <div class="row">
+                  <div class="col-6">
+                  <div class="form-group">
+                      <input type="text" name="firstname" id="firstname" class="form-control" placeholder="FirstName" [(ngModel)]='display.firstname'  required >
+                        
+                   </div>
+                  </div>
+              
+              <div class="col-6">
+              <div class="form-group">
+                  <input type="text" name="lastname" id="lastname" class="form-control" placeholder="LastName" [(ngModel)]='display.lastname'  required >
+                    
+               </div>
+              </div>
+              </div>
+            <br>
+            <label>Parents Name:</label>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="fathername" id="fathername" class="form-control" placeholder="FatherName" [(ngModel)]='display.fathername'  required >
+                      
+                 </div>
+                </div>
+                <div class="col-6">
+                 <div class="form-group">
+                    <input type="text" name="mothername" id="mothername" class="form-control" placeholder="MotherName" [(ngModel)]='display.mothername'  required >
+                     
+                 </div>
+                </div>
+            </div> 
+            <br>
+            <label>Birth Date:</label><br>
+            <div class="form-group">
+                <input type="date"  name="dateofbirth" id="dateofbirth" class="input"  [(ngModel)]='display.dateofbirth' min="1947-01-01" max="2020-12-31"  required>
+                  
+             </div>
+
+            <br>
+           
+              <label>Gender</label>
+            <div>
+                <fieldset>
+                  <legend style="display: none">Gender</legend>
+                  <span><input id="element_8_1" name="element_8" class="element radio" type="radio" value="male" [(ngModel)]='display.element_8' >
+                  <label class="choice" for="element_8_1">Male</label>
+                  </span>&nbsp;&nbsp;&nbsp;
+                  <span><input id="element_8_2" name="element_8" class="element radio" type="radio" value="female"[(ngModel)]='display.element_8' >
+                  <label class="choice" for="element_8_2">Female</label>
+                  </span>
+                </fieldset>
+              </div><br>
+
+            
+            <label>E-mail:</label>
+            <div class="form-group">
+                  
+                <input type="email" name="email" class="form-control" id="email" [(ngModel)]="display.email" placeholder=" Email-id"   required >
+                  
+            </div><br>
+            <label>Phone Number:</label>
+            <div class="row">
+                <div class="col-6">
+                <div class="form-group">
+                    <input type="tel" name="phonenum" id="phonenum" class="form-control" placeholder="Phone Number" [(ngModel)]="display.phonenum"  required >
+                     
+                 </div>
+                 </div>
+                 <div class="col-6">
+                <div class="form-group">
+                    <input type="tel" name="altnum" id="altnum" class="form-control" placeholder="Alternate Number" [(ngModel)]="display.altnum" minlength="10" maxlength="10" required>
+                      
+                 </div>
+                  </div>
+                </div><br>
+            <label>Current Address:</label>
+            <div>
+                <div class="form-group">
+                    <input type="text" name="cstreet" id="cstreet" class="form-control" placeholder="Street Address" [(ngModel)]="display.cstreet"  required>
+                      
+                 </div><br>
+            <div class="row">
+                <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="ccity" id="ccity" class="form-control" placeholder="City" [(ngModel)]="display.ccity"  required>
+                      
+                 </div>
+                 </div>
+                 <div class="col-6">
+                 <div class="form-group">
+                    <input type="text" name="cstate" id="cstate" class="form-control" placeholder="State / Province" [(ngModel)]="display.cstate"  required >
+                      
+                 </div>
+                 </div>
+            </div><br>
+            <div class="row">
+                <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="czip" id="czip" class="form-control" placeholder="Postal / Zip Code" [(ngModel)]="display.czip"  required >
+                      
+                 </div>
+                 </div>
+                 <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="country" id="country" class="form-control" placeholder="Country" [(ngModel)]="display.country"  required>
+                      
+                 </div>
+                 </div>
+              </div>
+            </div><br>
+            <label>Permanent Address:</label>
+            <div>
+                <div class="form-group">
+                    <input type="text" name="pstreet" id="pstreet" class="form-control" placeholder="Street Address" [(ngModel)]="display.pstreet"  required>
+                      
+                 </div><br>
+            <div class="row">
+                <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="pcity" id="pcity" class="form-control" placeholder="City" [(ngModel)]="display.pcity"  required>
+                      
+                 </div>
+                 </div>
+                 <div class="col-6">
+                 <div class="form-group">
+                    <input type="text" name="pstate" id="pstate" class="form-control" placeholder="State / Province" [(ngModel)]="display.pstate"  required>
+                      
+                 </div>
+                 </div>
+            </div><br>
+            <div class="row">
+                <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="pzip" id="pzip" class="form-control" placeholder="Postal / Zip Code" [(ngModel)]="display.pzip"  required>
+                      
+                 </div>
+                 </div>
+                 <div class="col-6">
+                <div class="form-group">
+                    <input type="text" name="pcountry" id="pcountry" class="form-control" placeholder="Country" [(ngModel)]="display.pcountry"  required>
+                      
+                 </div>
+                 </div> 
+              </div>
+            </div><br>
+            
+            <hr>
+
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <label>Date Of Joining</label><br>
+                <div class="form-group">
+                    <input type="date"  name="doj" id="doj" class="input"  [(ngModel)]="display.doj"   disabled>
+                     
+                 </div>
+               </div>
+               <div class="col-6">
+                  <label>Date Of Leaving:</label><br>
+                  <div class="form-group">
+                      <input type="date"  name="dol" id="dol" class="input"  [(ngModel)]="display.dol"   required>
+                      
+                   </div>
+               </div>
+            </div>
+
+          <hr><br>
+          <h5>Education Details</h5><br>
+            <label>SSLC School Name:</label>
+            
+            <div class="form-group">
+                <input type="text" name="school" id="school" class="form-control" placeholder="School Name" [(ngModel)]="display.school" required>
+                  
+             </div><br>
+            
+            <div>
+            <label>Percentage:</label>
+            <div class="form-group">
+                <input type="number" name="percentage" id="percentage" class="form-control" placeholder="Percentage" [(ngModel)]="display.pcountry"  required>
+                  
+             </div>
+            
+          </div>
+          <br>
+          <div>
+            <label> SSLC MarkSheet:</label>
+              <input type="file" name="pic" accept="file_extension" [(ngModel)]="display.pic">
+            </div>
+        <br>
+
+        <hr><br>
+            <label>HSC School Name:</label>
+            <div class="form-group">
+                <input type="text" name="sschool" id="sschool" class="form-control" placeholder="School Name" [(ngModel)]="display.sschool"  required>
+                  
+             </div><br>
+            
+            <div>
+            <label>Percentage:</label>
+            <div class="form-group">
+                <input type="number" name="spercentage" id="spercentage" class="form-control" placeholder="Percentage" [(ngModel)]="display.spercentage"  required>
+                  
+             </div>
+          </div>
+          
+          <br>
+          <div>
+          <label> HSC MarkSheet:</label>
+            <input type="file" name="pict" accept="file_extension" [(ngModel)]="display.pict" >
+          </div>
+        <br>
+        <label>Diploma:</label><br>
+        <div class="form-group">
+            <input type="text" name="diploma" id="diploma" class="form-control" placeholder="Collage Name"     [(ngModel)]="display.diploma">                  
+         </div><br>
+         <select class="form-control" name="dcourse" [(ngModel)]="display.dcourse">
+          <option value="" disabled>Course</option>
+          <option>Diploma - Civil Engineering</option>
+          <option>Diploma - Electrical Engineering</option>
+          <option>Diploma - Electronics And Communication Engineering </option>
+          <option>Diploma - Computer Science Engineering </option>
+          <option>Diploma - Electrical & Electronics Engineering</option>
+        </select><br>
+        <div>
+        
+        <div class="form-group">
+            <input type="number" name="dpercentage" id="dpercentage" class="form-control" placeholder="Percentage" [(ngModel)]="display.dpercentage">
+         </div>
+      </div><br>
+      <div>
+      <label> Diploma MarkSheet:</label>
+        <input type="file" name="dpict" accept="file_extension"  [(ngModel)]="display.dpict">
+      </div>
+    <br>
+
+    <hr><br>
+        <hr><br>
+        <label>UnderGraduate:</label>
+            <div class="form-group">
+                <input type="text" name="collage" id="collage" class="form-control" placeholder="Collage Name" [(ngModel)]="display.collage"  required>
+                 
+             </div>
+            <br>
+            
+            <div class="form-group">
+              <select class="form-control" name="ug" #ug  [(ngModel)]="display.ug" (change)='change(ug.value)'>
+                <option value=""disabled>Course</option>
+                <option value="B.E">B.E</option> 
+                <option value="B.SC">B.SC</option>
+              </select>
+              </div>
+              <br>
+              <div class="form-group">
+              <div *ngIf="see=='B.E'">
+                <select class="form-control" name="ugcourse" id="course_1" [(ngModel)]="display.ugcourse">
+                  <option disabled>Department</option>
+                  <option>B.E - Computer Science and Engineering</option>
+                  <option>B.E - Electrical and Electronics Engineering</option>
+                  <option>B.E - Electronics and Communication Engineering </option>
+                  <option>B.E - Mechanical Engineering </option>
+                  <option>B.E - Civil Engineering </option>
+                  <option>M.Tech - Information Technology</option>
+                </select>
+              </div>
+              </div>
+              <div class="form-group">
+              <div *ngIf="see=='B.SC'">
+                <select class="form-control" name="ugcourse" id="course_2" [(ngModel)]="display.ugcourse">
+                  <option disabled>coruse</option>
+                  <option>B.SC - PCM</option>
+                  <option>B.SC - Physics</option>
+                  <option>B.SC - Maths</option>
+                  <option>B.SC - Zoology</option>
+                  <option>B.SC - Statistics</option>
+                  <option>B.SC - Botany</option>
+                  <option>B.SC - Home Science</option>
+                  <option>B.SC - Biochemistry</option>
+                  <option>B.SC - Computer Science</option>
+                  <option>B.SC - Physiotherapy</option>
+                  <option>B.SC - Nautical Science</option>
+                </select>
+              </div>
+
+                  
+             </div>
+            <br>
+            
+            <div>
+            
+            <div class="form-group">
+                <input type="number" name="cpercentage" id="cpercentage" class="form-control" placeholder="Percentage" [(ngModel)]="display.cpercentage"  required>
+                  
+             </div>
+          </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div><br>
+          
+          <label>Upload UnderGraduate MarkSheet:</label>
+            <input type="file"  name="ugpicture" accept="file_extension" [(ngModel)]="display.ugpicture" ngModel>
+          </div><hr>
+          
+         <br>
+             <label>PostGraduate:</label>
+            <div class="form-group">
+                <input type="text" name="pcollage" id="pcollage" class="form-control" placeholder="PG Collage Name" [(ngModel)]="display.pcollage"    ngModel>
+
+             </div>
+            <br>
+            <div class="form-group">
+              <select class="form-control" name="pg" #pg [(ngModel)]="display.pg" (change)='chang(pg.value)'>
+                  <option value=""disabled>Course</option>
+                  <option value="M.E">M.E</option> 
+                  <option value="M.SC">M.SC</option>
+                </select>
+                </div>
+                <br>
+                <div class="form-group">
+                <div *ngIf="show=='M.E'">
+                  <select class="form-control" name="pgcourse" [(ngModel)]="display.pgcourse" id="course_1">
+                    <option value="" disabled>Department</option>
+                    <option>M.E - Computer Science and Engineering</option>
+                    <option>M.E - Electrical and Electronics Engineering</option>
+                    <option>M.E - Electronics and Communication Engineering </option>
+                    <option>M.E - Mechanical Engineering </option>
+                    <option>M.E - Civil Engineering </option>
+                    <option>M.Tech - Information Technology</option>
+                  </select>
+                </div>
+                </div>
+                <div class="form-group">
+                <div *ngIf="show=='M.SC'">
+                  <select class="form-control" name="pgcourse" [(ngModel)]="display.pgcourse" id="course_2" >
+                    <option value="" disabled>Department</option>                   
+                    <option>M.SC - Physics</option>
+                    <option>M.SC - Maths</option>
+                    <option>M.SC - Zoology</option>                    
+                    <option>M.SC - Botany</option>                  
+                    <option>M.SC - Biochemistry</option>
+                    <option>M.SC - Computer Science</option>
+
+                  </select>
+                </div>
+                </div>
+                 <br>
+            <div>            
+            <div class="form-group">
+                <input type="number" name="pgpercentage" id="pgpercentage" class="form-control" placeholder="Percentage" [(ngModel)]="display.pgpercentage">      
+             </div>
+          </div>
+          <div><br>
+          <label>Upload PostGraduate MarkSheet:</label>
+            <input type="file"  name="pgfile" accept="file_extension" [(ngModel)]="display.pgfile">
+          </div><hr>
+          
+
+
+        <br>
+          
+            <div>
+                <label>Upload Resume:</label><br>
+                <input type="file" name="picture1" accept="file_extension" [(ngModel)]="display.picture1" required>
+            </div>
+            <br>
+            <div>
+            <label>Upload Photo:</label><br>
+            <input type="file" name="userPic" (change)='file($event)' accept="image/*"  required>
+          </div>
+          <br>
+          <label>Upload Aadhaar Id:</label><br>
+          <div class="button" style="width:230px">
+          <input type="file" name="picture3" accept="file_extension" [(ngModel)]="display.picture1" required>
+        </div>
+          <br><br>
+          <div class="row">
+              <button type="submit" value="submit" class="btn btn-success mr-3 text-center" >Update</button>
+              <button class="btn btn-danger ml-5 " routerLink="/employee/list">Cancel</button>
+        </div>
+        
+            </form>
+        </div>
+        <div class="col-lg-2 col-md-1 col-sm-12"> 
+          
+      
+    </div>
+  </div>
+</div>
+
